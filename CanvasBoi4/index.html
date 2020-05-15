@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+    <title>Canvas projekt</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <h1 class="jumbotron text-center bg-danger">Práce s canvasem</h1>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <div class="text-center">
+                    <button id="button" class="btn btn-danger">Nová hra</button>
+                    <h3>Skóre</h3>
+                </div>
+                </h3>
+                <p id="Vysledky" style="border-style:solid;  border-width:1px black" class="text-center">0</p>
+                <h3 class="text-center">Nejvyšší Skóre</h3>
+                <p id="NejVysledek" style="border-style:solid;  border-width:1px black" class="text-center">0</p>
+                <p class="text-muted"> Pozn. je možno použít jak pohyb myši po canvasu, tak klávesy WASD pro pohyb, (Q pro dash/teleportaci), ale pokud chcete použít myš tak ji
+                    v přípravě posuňte do canvasu prosím ^w^ (s Myší se hra mimochodem lehčí).</p>
+                    <div id="WarningText" style="color: sandybrown;">
+                    <p id="Warning" style="border-style:solid; border-width:medium; border-color:white;">Pozor všechny šance dohromady musí býti pod nebo rovno 100 %.</p class="text-danger">
+                    </div>
+                    <p class="text-danger">V případě pokud je někdo citlivý na rychle měnící se barevné obrázky, prosím tuto hru nehrajte.</p class="text-danger">
+            </div>
+            <div class="col-2">
+                <label>Počet bloků</label>
+                <input type="number" id="NumberBloky" class="form-control" value="10" min="0" />
+                <small class="text-muted">Počet minimálních bloků na canvasu</small>
+
+                <label>Počet asteroidů</label>
+                <input type="number" id="NumberAsteroidy" class="form-control" value="5" min="0"/>
+                <small class="text-muted">Počet minimálních asteroidů na canvasu</small>
+
+                <label>Šance na Freeze/OwO</label>
+                <input type="number" id="FreezeOwO" class="form-control" value="5" min="0" max="100"/>
+                <small class="text-muted">Tato hodnota je v procentech</small>
+
+                <label>Šance na Měnící se blok/Exploze asteroidu</label>
+                <input type="number" id="MenicExploze" class="form-control" value="10" min="0" max="100"/>
+                <small class="text-muted">Tato hodnota je v procentech</small>
+
+                <label>Šance na Zrychlující se blok/Zvětšující se asteroid až zánik</label>
+                <input type="number" id="ZrychlovacAazZanik" class="form-control" value="15" min="0" max="100"/>
+                <small class="text-muted">Tato hodnota je v procentech</small>
+            </div>
+            <div class="col-8">
+                <canvas id="canvas" width="1250" height="500" style="border:1px solid black;">
+                    Promiňte, ale váš prohlížec nepodporuje canvas
+                </canvas>
+            </div>
+
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="k.js"></script>
+    <footer>
+        <h1 class="jumbotron text-center bg-danger">@ Filip Ostárek IT2</h1>
+    </footer>
+</body>
+
+</html>
